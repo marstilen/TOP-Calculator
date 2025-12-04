@@ -1,8 +1,17 @@
 main{
     display: flex;
+    flex-flow: row wrap; 
 }
-.button{
+.button, .c, .clear, .operator, .calculate, .decimal{
 	width: 10vw;
 	height: 10vw;
     border-radius: 100%;
+    flex-shrink: auto;
+}
+.break{
+    flex-basis: 100%;
+}
+
+#calcTextBox{
+    width: 30%;
 }
