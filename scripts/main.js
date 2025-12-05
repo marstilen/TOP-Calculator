@@ -25,6 +25,10 @@ document.addEventListener("click", function (e) {
   if (e.target.getAttribute("class") == "button") {
     calcTextBox.value += e.target.getAttribute("value");
   } else if (e.target.getAttribute("class") == "operator") {
+    if (calcTextBox.value[calcTextBox.value.length-1] == "+" || calcTextBox.value[calcTextBox.value.length-1] == "-"  || calcTextBox.value[calcTextBox.value.length-1] == "*" || calcTextBox.value[calcTextBox.value.length-1] == "/") {
+      console.log("here")
+      calcTextBox.value = calcTextBox.value.slice(0, -1);
+    }
     calcTextBox.value += e.target.getAttribute("value");
   } else if (e.target.getAttribute("class") == "clear") {
     calcTextBox.value = "";
